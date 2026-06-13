@@ -1,49 +1,56 @@
-# 💡 IdeaVault
+<div align="center">
+  <h1>💡 IdeaVault</h1>
+  <p><b>A tiny, fully local idea catalog powered by your own LLM.</b></p>
+</div>
 
-A tiny, fully **local** idea catalog. You dump a raw thought into a clean
-web page; your own LLM (running through [Ollama](https://ollama.com)) gives it a
-title, picks a category, adds tags, and writes a one-line summary. Everything is
-saved as plain **Markdown files** on your own computer — no cloud, no account,
-nothing leaves your machine.
+<br />
 
-Think of it as a private, offline, Notion-style inbox for ideas.
-
----
-
-## What you get
-
-- A browser UI: a "dump" box, a category sidebar, searchable idea cards, and click-to-edit.
-- Automatic organizing by a local model: **title, category, tags, summary**.
-- Storage as readable `.md` files (with frontmatter) in a `vault\` folder — open them in Notion, Obsidian, VS Code, or import anywhere.
-- Works **offline**. If the model isn't running, ideas are still saved to an "Inbox" and you can organize them by hand.
+<!-- 📸 SCREENSHOT SECTION 📸 -->
+<!-- Replace the placeholder URL inside the parenthesis below with your actual image path or upload it via GitHub's web UI -->
+![IdeaVault UI](https://via.placeholder.com/1000x500.png?text=Add+Your+Screenshot+Here)
 
 ---
 
-## Quick start (Windows)
+## ✨ What is it?
 
-1. **Install Python** (if you don't have it): https://www.python.org/downloads/
-   — tick *"Add python.exe to PATH"* during setup.
+You dump a raw thought into a clean web page; your own LLM (running through [Ollama](https://ollama.com)) automatically gives it a:
+- 🏷️ **Title**
+- 📁 **Category**
+- 🔖 **Tags**
+- 📝 **Summary**
+
+Everything is saved as plain **Markdown files** on your own computer — no cloud, no account, nothing leaves your machine. Think of it as a private, offline, Notion-style inbox for ideas.
+
+## 🚀 What you get
+
+- **A beautiful browser UI:** a "dump" box, a category sidebar, searchable idea cards, and click-to-edit.
+- **Automatic organizing:** No more manual sorting.
+- **Markdown portability:** Your ideas are stored as readable `.md` files (with frontmatter) in a `vault\` folder — open them in Notion, Obsidian, VS Code, or import anywhere.
+- **Offline support:** If the model isn't running, ideas are still saved to an "Inbox" and you can organize them by hand.
+
+## ⚡ Quick Start (Windows)
+
+1. **Install Python** (if you don't have it): [Download here](https://www.python.org/downloads/) 
+   *(Make sure to tick "Add python.exe to PATH" during setup).*
 
 2. **Install Ollama and a model** (for the auto-organizing):
-   - Download Ollama: https://ollama.com
+   - Download Ollama: [ollama.com](https://ollama.com)
    - Open a terminal and pull a small, fast model:
-     ```
+     ```bash
      ollama pull llama3.2
      ```
-   - Ollama runs in the background automatically after install.
 
-3. **Start IdeaVault**: double-click **`start.bat`**.
-   It sets everything up on first run and opens http://localhost:5000 in your browser.
+3. **Start IdeaVault**: 
+   - Double-click **`start.bat`**.
+   - It sets everything up on the first run and opens `http://localhost:5000` in your browser.
 
-That's it. Type an idea, press **Capture** (or Ctrl+Enter), and watch it get filed.
+> [!TIP]
+> **Capture an idea:** Type an idea, press **Capture** (or `Ctrl+Enter`), and watch it get filed instantly!
 
----
+## 📂 Where your ideas live
 
-## Where your ideas live
-
-Inside this folder:
-
-```
+Inside the app folder, you will find:
+```text
 vault\
   product-ideas\
     20260613-...-a1b2c3.md
@@ -51,8 +58,7 @@ vault\
     ...
 ```
 
-Each file looks like:
-
+Each file looks like this:
 ```markdown
 ---
 id: 20260613153012-a1b2c3
@@ -67,11 +73,7 @@ summary: A mobile app that transcribes spoken cooking steps into structured reci
 Original raw note text goes here, exactly as you typed it.
 ```
 
-Because they're just Markdown, you can back them up, sync them, or open them in any other notes app.
-
----
-
-## Settings (optional)
+## ⚙️ Settings (optional)
 
 The app reads a few environment variables if you want to change defaults:
 
@@ -86,27 +88,28 @@ Example (PowerShell):
 $env:OLLAMA_MODEL="qwen2.5"; python app.py
 ```
 
----
+## 🛠️ Manual Run
 
-## Manual run (instead of start.bat)
-
-```
+Instead of using `start.bat`, you can run it manually:
+```bash
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
 python app.py
 ```
-Then open http://localhost:5000.
+Then open `http://localhost:5000`.
+
+## 🆘 Troubleshooting
+
+- **Ideas all go to "Inbox"**  
+  The model isn't reachable. Make sure Ollama is installed and you ran `ollama pull llama3.2`. Test it with `ollama run llama3.2`.
+- **Port 5000 in use**  
+  Edit the last line of `app.py` and change `port=5000` to something else.
+- **Want a different model**  
+  Pull it (`ollama pull <name>`) and set `OLLAMA_MODEL`.
 
 ---
 
-## Troubleshooting
-
-- **Ideas all go to "Inbox".** The model isn't reachable. Make sure Ollama is
-  installed and you ran `ollama pull llama3.2`. Test it with `ollama run llama3.2`.
-- **Port 5000 in use.** Edit the last line of `app.py` and change `port=5000`.
-- **Want a different model.** Pull it (`ollama pull <name>`) and set `OLLAMA_MODEL`.
-
----
-
-Private by design: the only network call is to Ollama on your own machine.
+<div align="center">
+  <sub>Private by design: the only network call is to Ollama on your own machine.</sub>
+</div>
