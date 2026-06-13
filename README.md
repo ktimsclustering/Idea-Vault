@@ -7,7 +7,8 @@
 
 <!-- 📸 SCREENSHOT SECTION 📸 -->
 <!-- Replace the placeholder URL inside the parenthesis below with your actual image path or upload it via GitHub's web UI -->
-![IdeaVault UI](https://via.placeholder.com/1000x500.png?text=Add+Your+Screenshot+Here)
+![IdeaVault UI](<img width="864" height="388" alt="image" src="https://github.com/user-attachments/assets/2de63860-47cf-4988-8a2e-d6fa85779e9d" />
+)
 
 ---
 
