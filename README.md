@@ -7,8 +7,9 @@
 
 <!-- 📸 SCREENSHOT SECTION 📸 -->
 <!-- Replace the placeholder URL inside the parenthesis below with your actual image path or upload it via GitHub's web UI -->
-![IdeaVault UI](<img width="864" height="388" alt="image" src="https://github.com/user-attachments/assets/2de63860-47cf-4988-8a2e-d6fa85779e9d" />
-)
+<img width="864" height="388" alt="IdeaVault UI" src="https://github.com/user-attachments/assets/2de63860-47cf-4988-8a2e-d6fa85779e9d" />
+
+
 
 ---
 
